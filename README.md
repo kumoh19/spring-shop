@@ -11,7 +11,9 @@ class와 object를 많이 활용해서 개짓거리 하는걸 객체지향 프�
 (2) object 뽑는거
 
 (3) constructor 쓰는거
-
+<br/>
+<br/>
+<br/>
 
 
 > **정리**
@@ -31,6 +33,9 @@ class와 object를 많이 활용해서 개짓거리 하는걸 객체지향 프�
 심지어 함수 파라미터 문법도 사용가능
 
 4. field, attribute, method, instance라는 용어 배움
+<br/>
+<br/>
+<br/>
 
 
 
@@ -42,6 +47,9 @@ Q. 쇼핑몰은 매번 다른 상품명이랑 가격을 보내야하는거 아�
 - **템플릿 엔진**이라는걸 사용
 
 템플릿 엔진은 서버의 데이터를 html에 집어넣어주는걸 도와주는 외부 라이브러리
+<br/>
+<br/>
+<br/>
 
 
 
@@ -77,6 +85,9 @@ String list(Model model) {
 
 Thymeleaf 문법을 사용하고 싶으면 templates 폴더로 html 파일을 옮겨야 잘 동작한다.
 
+<br/>
+<br/>
+<br/>
 
 
 > **데이터베이스 호스팅받기**
@@ -98,6 +109,9 @@ AWS / Google Cloud / 마이크로소프트 Azure 등등 있는데
 - **주의!!! 관리자 이름 sa 안됌** (계속 배포할때 에러나서 개고생했다..)
 
 
+<br/>
+<br/>
+<br/>
 
 
  
@@ -110,14 +124,21 @@ DB 접속해서 데이터를 미리보고 싶으면
 
 DBeaver같은 프로그램 설치하는게 가장 쉽고 빠르고 좋다.
 
+![image-20240804122742892](https://github.com/user-attachments/assets/dafb16fb-aee1-4aa9-a20e-81b182688f85)
 
 - Server Host에
+
+![image-20240804122710134](https://github.com/user-attachments/assets/f00b6b1e-8125-42c7-a85a-fe900d809380)
+
 
 - Authentication에 azure에서 만든 db에 등록한 서버 관리자 이름과 비번 입력
 
 - 주의) 1년 무료 사용 기간 전에 삭제
 
 
+<br/>
+<br/>
+<br/>
 
 
  
@@ -173,22 +194,28 @@ ORM쓰면
 
 - 데이터 입출력 속도 저하
 
-
+<br/>
 
 JPA: Java의 ORM 표준 문법
 
 Hibernate: JPA의 구현체. JPA 쓰기좋게 구현한거
 
+<br/>
+<br/>
+<br/>
 
 
-#### JPA와 Hibernate
+### JPA와 Hibernate
 
-JPA(Java Persistence API)는 자바에서 ORM(Object-Relational Mapping)을 위한 표준 인터페이스입니다. 관계형 데이터베이스에서 데이터를 입출력할 때, SQL을 직접 작성하는 대신 자바 코드로 작업할 수 있게 해줍니다. 이를 통해 개발자들은 테이블을 클래스로 관리하고, 타입 체크 및 코드 재사용이 용이해지는 등의 장점을 누릴 수 있다.
+JPA(Java Persistence API)는 자바에서 ORM(Object-Relational Mapping)을 위한 표준 인터페이스이다. 관계형 데이터베이스에서 데이터를 입출력할 때, SQL을 직접 작성하는 대신 자바 코드로 작업할 수 있게 해줍니다. 이를 통해 개발자들은 테이블을 클래스로 관리하고, 타입 체크 및 코드 재사용이 용이해지는 등의 장점을 누릴 수 있다.
 
 ORM 라이브러리를 사용하면 SQL 대신 자바 코드로 데이터베이스 작업을 할 수 있다. 이로 인해 개발이 쉬워지고, 코드의 유지보수성과 재사용성이 높아진다. 필요할 경우 직접 SQL을 작성하는 것도 가능하다.
 
 Hibernate는 가장 인기 있는 JPA 구현체로, JPA 표준을 사용하기 쉽게 만들어준다. JPA를 설치하면 Hibernate가 함께 설치되는 경우가 많아, 두 용어를 혼용해서 사용하는 경우가 많다. JPA는 표준 인터페이스를 제공하고, Hibernate는 그 표준을 구현한 라이브러리이다.
 
+<br/>
+<br/>
+<br/>
 
 
 ### `runtimeOnly`와 `compileOnly` 
@@ -249,7 +276,7 @@ org.jkiss.dbeaver.model.sql.DBSQLException: SQL Error [1044] [42000]: Access den
 GRANT ALL PRIVILEGES ON shop.* TO 'hodu'@'%';
 FLUSH PRIVILEGES; ###MySQL 서버를 다시 로드
 ```
-
+<br/><br/><br/>
  
 
  
@@ -266,7 +293,7 @@ FLUSH PRIVILEGES; ###MySQL 서버를 다시 로드
 
 컬럼에 데이터가 비어있을 경우 저장을 막아줌.
 
- 
+ <br/>
 
 ```
 @Column(unique = true)
@@ -278,7 +305,7 @@ FLUSH PRIVILEGES; ###MySQL 서버를 다시 로드
 
 회원 아이디나 이메일 저장할 때 쓰는게 어떨까..
 
- 
+ <br/>
 
 ```
 @Column(columnDefinition = "TEXT") 
@@ -288,14 +315,14 @@ String만 달랑 집어넣어두면 255자까지 저장이 가능한데
 
 매우 긴 문자를 저장하고 싶으면 MySQL같은 경우 text 타입같은게 있는데 그런거 쓰고 싶으면 여기다가 적으면 된다.
 
- 
+ <br/>
 
 참고로 컬럼 이걸 수정을 했는데 이건 서버재시작한다고 바로 DB에 반영되지 않을 수 있다. 
 
 아마 테이블 삭제하고 서버 재시작해야 테이블에 깔끔하게 반영이 잘되니까 처음에 만들 때 잘 만들어야함.
 
 아니면 테이블 변경사항은 쌩으로 SQL 문법 짜는게 깔끔함.
-
+<br/>
 
 
 결론 : 
