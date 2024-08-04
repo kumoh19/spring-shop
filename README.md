@@ -73,7 +73,7 @@ String list(Model model) {
 
 3. html 태그에 th:text="${작명}" 이라고 써야 서버에서 보낸 데이터 출력이 가능.
 
-그래서 위 html을 유저에게 전송할 땐 앞으로 <h4>태그에 "홍길동"이 박혀서 전송됨.
+그래서 위 html을 유저에게 전송할 땐 앞으로 `<h4>`태그에 "홍길동"이 박혀서 전송됨.
 
 Thymeleaf 문법을 사용하고 싶으면 templates 폴더로 html 파일을 옮겨야 잘 동작한다.
 
@@ -110,11 +110,8 @@ DB 접속해서 데이터를 미리보고 싶으면
 
 DBeaver같은 프로그램 설치하는게 가장 쉽고 빠르고 좋다.
 
-![image-20240804122742892](C:\Users\User\AppData\Roaming\Typora\typora-user-images\image-20240804122742892.png)
 
 - Server Host에
-
-![image-20240804122710134](C:\Users\User\AppData\Roaming\Typora\typora-user-images\image-20240804122710134.png)
 
 - Authentication에 azure에서 만든 db에 등록한 서버 관리자 이름과 비번 입력
 
