@@ -25,15 +25,14 @@ public class ItemController {
     @GetMapping("/list")
     String list(Model model){
         List<Item> result = itemRepository.findAll(); //Lombok 문법, 테이블 모든 데이터 갖고 옴
-        System.out.println(result.get(0).price);
-        System.out.println(result.get(0).title);
 
-        ArrayList<Object> a = new ArrayList<>(); //Object를 쓰면 모든 자료형 넣을 수 있음
-        a.add(30);
-        a.add(40);
-        System.out.println(a);
+        //System.out.println(result.get(0).price);
+        //System.out.println(result.get(0).title);
 
-        model.addAttribute("name","비싼 바지");
+        model.addAttribute("items",result);
+        var a = new Item();
+        System.out.println(a.toString());
+
         return "list.html";
     }
 }
